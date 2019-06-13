@@ -1,5 +1,5 @@
-LANGS=fr en
-TARGETS=$(addprefix RaphaelPinson_,$(LANGS))
+LANGS=en
+TARGETS=$(addprefix Lai_,$(LANGS))
 PDF_TARGETS=$(addsuffix .pdf,$(TARGETS))
 HTML_TARGETS=$(addsuffix .html,$(TARGETS))
 
@@ -17,8 +17,7 @@ gh-pages: html
 	git push
 	git checkout master
 
-frenchcv: RaphaelPinson_fr.pdf
-englishcv: RaphaelPinson_en.pdf
+englishcv: Lai_en.pdf
 
 %.pdf: %.tex
 	#lualatex -interaction=batchmode $<
