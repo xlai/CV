@@ -1,10 +1,10 @@
 %% Copyright 2011-2017 Raphaël Pinson (raphink@gmail.com).
-\ProvidesPackage{RaphaelPinson}
+\ProvidesPackage{cv}
 %\RequirePackage[pdftex]{hyperref}
 \RequirePackage{metalogo}
 
 % moderncv themes
-\moderncvtheme[orange]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 %\moderncvtheme[green]{casual}   % idem
 
 % character encoding
@@ -28,8 +28,8 @@
 \ifxetexorluatex
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
-\newfontfamily{\githubfont}{Octicons}
-\newfontfamily{\linkedinfont}{Myriad Pro}
+%\newfontfamily{\githubfont}{Octicons}
+%\newfontfamily{\linkedinfont}{Myriad Pro}
 \else
 \newcommand\githubfont{}
 \newcommand\linkedinfont{}
@@ -47,21 +47,21 @@
 \end{tikzpicture}}}
 
 % personal data
-\firstname{Rapha\"el}
-\familyname{Pinson}
+\firstname{Xiaoran}
+\familyname{Lai}
 %\address{Chemin du Jura 3}{1041~Poliez-le-Grand}{Switzerland}
-\mobile{+41 78 402 84 33}
+\mobile{+47 48 33 49 55}
 %\phone{}
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{rpinson@gmail.com}
+\email{xiaoran.lai@medisin.uio.no}
 %\homepage{www.raphink.info}
 %\extrainfo{\octocat~\url{http://github.com/raphink}}
-\photo[64pt]{identity}
+%\photo[64pt]{identity}
 
 
 \AtBeginDocument{\renewcommand{\labelitemi}{-- }}
 
-\usepackage[firstyear=1999,lastyear=2018]{moderntimeline}
+\usepackage[firstyear=2009,lastyear=2019]{moderntimeline}
 %\tlmaxdates{1999}{2012}
 \tlwidth{0.8ex}
 
@@ -102,3 +102,28 @@
 \newcommand*{\developer}{\footnotemark[1]}
 \newcommand*{\contributor}{\footnotemark[2]}
 
+\usepackage[style=mla]{biblatex}
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifitemannotation{highlight}{\textbf{#1}}{#1}
+}
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}{\textbf{#1}}{#1}
+}
+
+%\defbibenvironment{bibliography}
+%  {\list
+%     {\printtext[labelnumberwidth]{% label format from numeric.bbx
+%        \printfield{labelprefix}%
+%        \printfield{labelnumber}}}
+%     {\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+%      \setlength{\labelwidth}{\hintscolumnwidth}%
+%      \setlength{\labelsep}{\separatorcolumnwidth}%
+%      \leftmargin\labelwidth%
+%      \advance\leftmargin\labelsep}%
+%      \sloppy\clubpenalty4000\widowpenalty4000}
+%  {\endlist}
+%  {\item}
+
+\addbibresource{bibliography_cv.bib}
+
+ 

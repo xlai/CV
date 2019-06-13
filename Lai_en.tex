@@ -13,7 +13,8 @@
 \documentclass[11pt,a4paper,nolmodern]{moderncv}
 
 \usepackage{cv}
-\address{Chemin du Jura 3}{1041~Poliez-le-Grand}{Switzerland}
+\usepackage{moderncvcolourgrey}
+\address{Breigata 12}{0187 Oslo}{Norway}
 
 \usepackage[english]{babel}
 \linespread{0.9}
@@ -25,25 +26,28 @@
 
 
 % personal data
-\title{Open-Source Technologist}
-\extrainfo{%
-\linkedin~\httplink{www.linkedin.com/in/raphink}\\%
-\octocat~\httplink{www.github.com/raphink}\\%
-Driving License} % optional, remove the line if not wanted
+%\title{Open-Source Technologist}
+%\extrainfo{%
+%\linkedin~\httplink{www.linkedin.com/in/lai}\\%
+%\octocat~\httplink{www.github.com/raphink}\\%
+%Driving License} % optional, remove the line if not wanted
 
-\myquote{Freely you have received, freely give}{Matthew 10:8}
-
+%\myquote{Freely you have received, freely give}{Matthew 10:8}
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-\setmainfont{Minion Pro}
-\setsansfont{Myriad Pro}
+%\setmainfont{Latin Modern Roman}
+%\setsansfont{Arial}
+%\setmainfont{Minion Pro}
+%\setsansfont{Myriad Pro}
 
 \hyphenpenalty=10000
 \maketitle
+
+\section{Research Interests}
 
 \section{Skills}
 
@@ -52,40 +56,34 @@ Driving License} % optional, remove the line if not wanted
            {Debian OSes}{Debian\contributor, Ubuntu\developer}
 
 \subsection{Development}
-\cvcomputer{Languages}{C, Perl, Python, Shell/Bash, Ruby, Go, GNU Make, Ada, Lua}
+\cvcomputer{Languages}{C, Python, Shell/Bash, R}
            {Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, Bootstrap, PHP, Semantic Web}
-\cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}
-           {Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
-\cvcomputer{Formats}{XML/XPath, SGML, YAML/JSON, RDF/RSS/FOAF}
-           {Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
-\cvcomputer{Source Management}{RCS/CVS, SVN, Bazaar, Git, Mercurial}
-           {Tools}{Autotools, Cmake, Trac,
-                   Gforge, Launchpad, GitHub}
-
+\cvcomputer{Frameworks}{FEniCS}
+           {Databases}{MySQL}
+\cvcomputer{Methods}{Object Oriented Programming, Scalability Tests}
+           {Visualisation}{Paraview, Plotly}
+\cvcomputer{Source Management}{Git, Mercurial}
+           {Tools}{Cmake, GitHub, BitBucket, Jupyter}
+%\cvcomputer{Operating Systems}{GNU/Linux (Debian, Ubuntu, RedHat),
+%                               MacOS X, Windows}
+%           {1}{2}
 \subsection{Systems and Networks Administration}
-\cvcomputer{Web}{Apache, Lighttpd, Nginx, Varnish, Bind, Squid, Dansguardian, VsFTPd}
-           {Monitoring}{BB4/Hobbit, Nagios, Munin, Cacti, Graphite, Logstash}
-\cvcomputer{Mail}{Postfix, Exim, SSMTP}
-           {Backup}{Amanda, BackupManager, Duplicity}
-\cvcomputer{Installation / Deployment}{FAI, Kickstart, Reprepro, Cfengine,
-                                         Puppet\contributor, MCollective\contributor, Augeas\developer}
-           {Networks}{DHCPd, VLANs, OpenVPN, Keepalived}
-\cvcomputer{Operating Systems}{GNU/Linux (Debian\contributor, Ubuntu\developer, RedHat),
-                               MacOS X, Windows, *BSD}
-           {Databases}{MySQL, PostgreSQL, SQLite, BerkeleyDB, CouchDB}
-\cvcomputer{Virtualization}{Xen, VMWare, Docker, Rancher, Kubernetes, OpenShift, Openstack, Amazon Web Services}
-           {Security}{SSL, PGP/GnuPG, OpenSSH}
 
 \subsection{Office and tools}
-\cvcomputer{Office}{OpenOffice/LibreOffice, Microsoft Office, Gimp,
-                    Inkscape}
-           {Project Management}{TaskJuggler, GanttProject}
-\cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}, \LuaTeX{}}
-           {Wikis}{MediaWiki, MoinMoin}
+\cvcomputer{Office}{OpenOffice/LibreOffice, Microsoft Office, Gimp, Inkscape}
+{Typesetting}{\TeX{}, \LaTeX{}, \LuaTeX{}}
+%           {Project Management}{TaskJuggler, GanttProject}
 
 \devnotes{Developer}{Contributor}
 
 \newpage
+\nocite{*}
+\printbibheading[title={Publications},heading=bibnumbered]
+\printbibliography[title={Peer-reviewed},type=article,heading=subbibnumbered]
+\printbibliography[title={In preparation},type=online,heading=subbibnumbered]
+\printbibheading[title={Presentations},heading=bibnumbered]
+\printbibliography[title={Posters},type=booklet,heading=subbibnumbered]
+\printbibliography[title={Talks},type=inproceedings,heading=subbibnumbered]
 
 \section{Experience}
 \subsection{IT Experience}
@@ -185,23 +183,13 @@ Driving License} % optional, remove the line if not wanted
 
 \section{Education}
 
-\tldatecventry{2013}{Puppet Trainer}{\href{https://puppetlabs.com/services/puppet-training/}{PuppetLabs}}{Amsterdam}{}{Official Training Partner for PuppetLabs' courses (Puppet Fundamentals, Puppet Advanced, Extending Puppet with Ruby)}
+\tllabelcventry{2014}{2019}{2014--2019}{Ph.D. Biostatistics}{\newline\href{http://www.uio.no}{Univeristy of Oslo}}{Oslo, Norway}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
 
-\tldatecventry{2009}{ITIL{\LARGE\textregistered} v3 Foundation}{\href{http://www.itil-officialsite.com/home/home.asp}{EXIN}}{Sophia Antipolis}{}{Organization and efficiency of the Information System}
+\tllabelcventry{2012}{2013}{2012--2013}{MSc. Statistics}{\href{http://www.imperial.ac.uk}{Imperial College London}}{London, UK}{}{Chemistry, Physics, Mathematics}
 
-\tldatecventry{2005}{Student in Business Creation and Management}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Accounting, Management, Marketing, Law}
+\tllabelcventry{2009}{2012}{2009-2012}{BSc. Mathematics with Statistics}{\href{http://www.imperial.ac.uk}{Imperial College London}}{London, UK}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
 
-\tldatecventry{2005}{Student in Pedagogy (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{Pedagogy, Didacticism, Cognitive Psychology}
-
-\tllabelcventry{2003}{2005}{2003--2005}{Student in Mechanical Engineering}{\newline\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
-
-\tldatecventry{2004}{Licence, equivalent of a British Bsc, in Mechanics}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
-
-\tllabelcventry{2002}{2003}{2002--2003}{Student in Chemistry}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chemistry, Physics, Mathematics}
-
-\tllabelcventry{2000}{2002}{2000-2002}{Student in Medicine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
-
-\tldatecventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
+%\tldatecventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
 
 
 
@@ -215,13 +203,9 @@ Driving License} % optional, remove the line if not wanted
 
 
 \section{Foreign Languages}
-\cvlanguage{French}{Native}{Mother Tongue}
+\cvlanguage{Chinese}{Native}{Mother Tongue}
 \cvlanguage{English}{Fluent}{Daily practice, conferences given in English}
-\cvlanguage{Spanish}{Good Level}{Occasional practice}
-\cvlanguage{German}{Good Level}{Studied 9 years in school}
-%\cvlanguage{Russian}{Intermediary Level}{Studied 3 years in school}
-%\cvlanguage{Dutch}{Beginner}{Studied alone}
-%\cvlanguage{Swedish}{Beginner}{Studied alone}
+\cvlanguage{Norwegian}{Good Level}{Occasional practice}
 
 \section{Personal interests}
 
